@@ -76,3 +76,8 @@ paper-material{
 .flex {
 	@apply(--layout-horizontal);
 }
+
+.layout.horizontal.center.justified {
+	@apply(--layout-horizontal);
+	@apply(--layout-center-justified);
+}

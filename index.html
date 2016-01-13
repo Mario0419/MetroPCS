@@ -12,7 +12,7 @@
 <link rel="import" href="bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="bower_components/paper-material/paper-material.html">
 <link rel="import" href="bower_components/paper-card/paper-card.html">
-<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
 <link rel="import" href="bower_components/google-map/google-map.html">
 <link rel="import" href="bower_components/google-map/google-map-marker.html">
 <link rel="import" href="bower_components/google-map/google-map-search.html">
@@ -25,6 +25,8 @@
 <link rel="import" href="bower_components/iron-image/iron-image.html">
 <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="bower_components/gold-phone-input/gold-phone-input.html">
+<link rel="import" href="bower_components/gold-email-input/gold-email-input.html">
 <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -112,11 +114,17 @@
           </paper-item>
          <career-custom>
             <form is="iron-form" id="form" method="post" action="/form/handler">
-                <div class="container flex">
-                      <paper-input name="firstname" label="firstname"></paper-input>
-                      <paper-input name="lastname" label="lastname"></paper-input>
-                      <paper-input name="phone" label="Phone #" type="number"></paper-input>
+                <div class="layout horizontal center justified">
+                      <paper-input name="firstname" label="First Name"></paper-input>
+                      <paper-input name="lastname" label="Last Name"></paper-input>
                 </div>
+                <div class="layout horizontal center justified">
+                  <gold-phone-input name ="firstname"></gold-phone-input>
+                  <gold-email-input name="email"></gold-email-input>
+                
+                </div>
+                
+                <paper-input type="file" name="resume"></paper-input>
               </form>   
         </career-custom>
         </paper-material>
