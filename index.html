@@ -27,6 +27,7 @@
 <link rel="import" href="bower_components/paper-menu/paper-menu.html">
 <link rel="import" href="bower_components/gold-phone-input/gold-phone-input.html">
 <link rel="import" href="bower_components/gold-email-input/gold-email-input.html">
+<link rel="import" href="bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html">
 <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -123,7 +124,16 @@
                   <gold-email-input name="email"></gold-email-input>
                 
                 </div>
-                
+                <div>
+                  <br>
+                  <br>
+                  Tell us a little about yourself. Please include whether you are looking for Full/Part time.
+                  <br>
+                  Remember to include your resume before submitting
+                </div>
+                <div class="layout center justified">
+                  <iron-autogrow-textarea rows="4"></iron-autogrow-textarea>
+                </div>
                 <paper-input type="file" name="resume"></paper-input>
               </form>   
         </career-custom>
