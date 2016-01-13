@@ -3,6 +3,8 @@
 <head>
 <link rel="stylesheet" type"text/css" href="MetroPCSm/maincss.css">
 <link rel="stylesheet" type"text/css"  href="MetroPCSm/customstylepolymer.css">
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="custompolymer.html">
 <link rel="import" href="bower_components/paper-button/paper-button.html">
 <link rel="import" href="bower_components/paper-input/paper-input.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
@@ -100,11 +102,17 @@
       </paper-material>
 		</div>
 		<div name="Careers">
-			<body>
-				<div id="googleForm" class="container-fluid">
-					<iframe src="https://docs.google.com/forms/d/1FY_AI42_wPvu6lbXyKNii9g0ezVExrsviJtSIB95jDk/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-				</div>
-			</body>
+        <div>
+        <paper-material id="careerPanel">
+          <paper-toolbar>
+            <paper-item>Careers</paper-item>
+          </paper-toolbar>
+          <paper-item>
+          At MetroPCS - No Limit Talk we are always looking to bring new leaders to our team. If you think you have what it takes and would like to apply for an opportunity to work with us, please submit us a resume and your information below.
+          </paper-item>
+         <career-custom></career-custom>
+        </paper-material>
+      </div>
 		</div>
 		<div name="Contact Us">Contact Us</div>
 		<div name="FAQ">FAQ</div>

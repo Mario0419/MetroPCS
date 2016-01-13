@@ -1,0 +1,25 @@
+<dom-module id="career-custom">
+<template>
+	<paper-button on-click="toggle">Apply</paper-button>
+	
+	<iron-collapse id="collapsePanel">
+            <form is="iron-form" id="form" method="post" action="/form/handler">
+              <div class="container flex">
+			 	<paper-input name="firstname" label="firstname"></paper-input>
+			  	<paper-input name="lastname" label="lastname"></paper-input>
+              </div>
+            </form>
+    </iron-collapse>	
+          
+</template>
+<script>
+Polymer({
+	is: 'career-custom',
+	toggle: function(){
+		this.$.collapsePanel.toggle();
+	}
+});
+
+</script>
+
+</dom-module>
