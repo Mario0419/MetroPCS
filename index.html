@@ -110,7 +110,15 @@
           <paper-item>
           At MetroPCS - No Limit Talk we are always looking to bring new leaders to our team. If you think you have what it takes and would like to apply for an opportunity to work with us, please submit us a resume and your information below.
           </paper-item>
-         <career-custom></career-custom>
+         <career-custom>
+            <form is="iron-form" id="form" method="post" action="/form/handler">
+                <div class="container flex">
+                      <paper-input name="firstname" label="firstname"></paper-input>
+                      <paper-input name="lastname" label="lastname"></paper-input>
+                      <paper-input name="phone" label="Phone #" type="number"></paper-input>
+                </div>
+              </form>   
+        </career-custom>
         </paper-material>
       </div>
 		</div>

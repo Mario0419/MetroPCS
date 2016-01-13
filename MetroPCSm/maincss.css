@@ -73,3 +73,6 @@ paper-material{
   background:white;
 }
 
+.flex {
+	@apply(--layout-horizontal);
+}
