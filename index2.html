@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type"text/css" href="MetroPCSm/maincss.css">
+<link rel="stylesheet" type"text/css"  href="MetroPCSm/customstylepolymer.css">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="bower_components/paper-material/paper-material.html">
+<link rel="import" href="bower_components/paper-card/paper-card.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="bower_components/google-map/google-map.html">
+<link rel="import" href="bower_components/google-map/google-map-marker.html">
+<link rel="import" href="bower_components/google-map/google-map-search.html">
+<link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="bower_components/paper-item/paper-item.html">
+<link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="bower_components/iron-image/iron-image.html">
+<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="bower_components/paper-menu/paper-menu.html">
+</head>
+<body>
+	<paper-material elevation="2">
+		<paper-tabs selected="0">
+			<paper-tab>Home</paper-tab>
+			<paper-tab>About</paper-tab>
+			<paper-tab>Locations</paper-tab>
+			<paper-tab>Financing</paper-tab>
+			<paper-tab>Careers</paper-tab>
+			<paper-tab>Contact Us</paper-tab>
+			<paper-tab>FAQ</paper-tab>
+		</paper-tabs>
+	</paper-material>
+	<iron-pages selected="{{selected}}">
+		<div name="Home" class="container flex-center-justified">
+			<paper-material id="homePanel" elevation="3">
+				<paper-item>
+				Welcome to MetroPCS No Limit Talk
+				</paper-item>
+			</paper-material>
+		</div>
+		<div name="About">About</div>
+		<div name="Locations">
+			<paper-header-panel id="locationHeaderPanel">
+				<paper-toolbar>
+					<paper-item>Locations</paper-item>
+				</paper-toolbar>
+				<paper-material>
+					<paper-item id="ec">East Colonial</paper-item>
+					<paper-item id="am">Americana</paper-item>
+					<paper-item id="pi">Pine Hills</paper-item>
+				</paper-material>
+			</paper-header-panel>
+			<google-map fitToMarkers="true" latitude="28.5673759" longitude="-81.2182539">
+				<google-map-marker latitude="28.5673759" longitude="-81.2182539" draggable="false" title="East Colonial">
+					<paper-item>East Colonial</paper-item>
+					<paper-item-body>
+						Address: 11222 E. Colonial Blvd, Orlando, FL, 32817
+						<br>
+						Phone: <a href="tel:4077361288">(407) 736-1288</a>
+					</paper-item-body>
+				</google-map-marker>
+				<google-map-marker latitude="28.4861473" longitude="-81.4760526" draggable="false" title="Americana">
+					<paper-item>Americana</paper-item>
+					<paper-item-body>
+						Address: 5405 South Texas Ave
+						<br>
+						Phone: <a href="tel:4072518851">(407) 251-8851</a>
+					</paper-item-body>
+				</google-map-marker>
+				<google-map-marker latitude="28.5795525" longitude="-81.4533089" draggable="false" title="Pine Hills">
+					<paper-item>Pine Hills</paper-item>
+					<paper-item-body>
+						Address: 2711 N. Pine Hills Rd
+						<br>
+						Phone: <a href="tel:4078261491">(407) 826-1491</a>
+					</paper-item-body>
+				</google-map-marker>
+			</google-map>
+		</div>
+		<div name="Financing">
+		<paper-material id="financePanel">
+			<paper-toolbar>		
+						<paper-item>Financing Options</paper-item>
+			</paper-toolbar>
+			<paper-item>
+					
+						At MetroPCS No Limit Talk, we strive to get you the phone of your dreams.
+						We offer financing from two partners, SmartPay by BillFloat and financing with Progressive
+						Click on the company of your choice and fill out the application before coming into the store!
+					
+			</paper-item>
+			<a href="https://www.progressivelp.com/onlineapplication/onlineapplication.aspx?sid=Metro4077361288">
+			<iron-image src="http://tallahasseefurnituredirect.com/wp-content/uploads/2014/09/progressivelogo.png"></iron-image>
+			</a>
+			<iron-image src="http://s3.amazonaws.com/finovate-archive/old/finovatewebsite/smart-pay-powered-by-billfloat-85720705.jpg"></iron-image>
+		</paper-material>
+		<span></span>  
+		</div>
+		<div name="Careers">
+			<paper-material id="careerPanel">
+				<paper-toolbar>
+					<div>Careers</div>
+				</paper-toolbar>	
+			
+			</paper-material>
+		</div>
+		<div name="Contact Us">Contact Us</div>
+		<div name="FAQ">FAQ</div>
+	</iron-pages>
+</body>
+<script>
+	var pages = document.querySelector('iron-pages');
+	var tabs = document.querySelector('paper-tabs');
+	tabs.addEventListener('iron-select', function(){
+		pages.selected = tabs.selected;
+	});
+</script>
+</html>

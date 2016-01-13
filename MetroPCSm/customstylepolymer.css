@@ -1,0 +1,19 @@
+:root {
+	--my-custom-color: purple;
+	--paper-tab-ink: var(--my-custom-color);
+	--paper-tabs-selection-bar-color: purple;
+	--paper-card-header-color: purple;	
+}
+
+.flex-center-justified {
+	@apply(--layout-horizontal);
+	@apply(--layout-center-justified);
+}
+
+.paper-ripple {
+	color: var(--paper-tab-ink, --paper-purple-a100);
+}
+
+.paper-material {
+	@apply(--layout-center-justified);
+}

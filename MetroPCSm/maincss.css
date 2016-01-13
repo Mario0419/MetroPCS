@@ -1,0 +1,74 @@
+#homePanel {
+	width:500px;
+	height:85%;
+	position:absolute;
+	left:50%;
+	top:10%;
+	margin-left:-250px;
+	/* margin-top:-250px; */
+}
+
+#googleForm {
+	position:absolute;
+	width:50%;
+	left:25%;
+	top:10%;
+}
+
+#navBar{
+  z-index:1;
+  background: white;
+}
+
+#googleMapContainer{
+  width:100%;
+  height:90%;
+  top:10%;
+}
+
+.financeImg{
+  width:248px;
+  height: 250px;
+}
+
+google-map{
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+
+#locationsChooser {
+	position: fixed;
+	width: 150px;
+  height:208px;
+	top: 75px;
+	left: 18px;
+	z-index: 1;
+  background:white;
+}		
+
+#financePanel {
+	width:500px;
+	height:85%;
+	position:absolute;
+	left:50%;
+	top:75px;
+  margin-left:-250px;
+}
+
+#careerPanel {
+	width:500px;
+	height:750px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-250px;
+	margin-top:-250px;
+	
+}
+
+paper-material{
+  background:white;
+}
