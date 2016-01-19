@@ -1,0 +1,27 @@
+<dom-module id="career-app">
+	
+<template>
+	<style>
+		p {
+			@apply(--paper-font-body1);
+		}
+		paper-button {
+			color: white;
+			background: purple;
+		}	
+	</style>
+	<paper-button on-click="toggle">Apply</paper-button>
+	
+	<iron-collapse id="collapsePanel">
+            	<content></content>
+    </iron-collapse>
+</template>
+<script>
+	Polymer({
+		is: 'career-app'
+		toggle: function(){
+			this.$.collapsePanel.toggle();
+		}	
+	});
+</script>
+</dom-module>

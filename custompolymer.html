@@ -1,5 +1,15 @@
 <dom-module id="career-custom">
 <template>
+	<style>
+		p {
+			@apply(--paper-font-body1);
+		}
+		paper-button {
+			color: white;
+			background: purple;
+		}
+		
+	</style>
 	<paper-button on-click="toggle">Apply</paper-button>
 	
 	<iron-collapse id="collapsePanel">
@@ -17,4 +27,60 @@ Polymer({
 
 </script>
 
+</dom-module>
+<dom-module id="career-about">
+	<template>
+		<style>
+		 p{
+			 @apply(--paper-font-body1);
+		 }
+		</style>
+		<br><br>
+		<p>Tell us a little about yourself. Please include whether you are looking for Full/Part time.<p>
+        <br>
+        <p>Remember to include your resume before submitting</p>
+	</template>
+<script>
+Polymer({
+	is: 'career-about',
+});
+</script>
+</dom-module>
+<dom-module id="style-element">
+
+<template>
+	<style>
+	
+	p {
+		@apply(--paper-font-body1);
+	}
+	</style>
+	<paper-material>
+		<content></content>
+		<p>mario was here</p>
+	</paper-material>
+</template>
+<script>
+Polymer({
+	
+	is: 'style-element'
+});
+</script>
+</dom-module>
+<dom-module id="about-app">
+<template>
+	<style>
+		p{
+			@apply(--paper-font-body1);
+		}
+	</style>
+	<paper-material>
+		<p>About us</p>
+	</paper-material>
+</template>
+<script>
+	Polymer({
+		is: 'about-app'
+	});
+</script>	
 </dom-module>
