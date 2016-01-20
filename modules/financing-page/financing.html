@@ -1,0 +1,35 @@
+<dom-module id="financing-page">
+  <template>
+    <style>
+      .financeImg{
+        width:248px;
+        height: 250px;
+      }
+      #financePanel {
+        width:500px;
+        height:85%;
+        position:absolute;
+        left:50%;
+        top:75px;
+        margin-left:-250px;
+      }
+    </style>
+    
+    <paper-material id="financePanel">
+      <paper-toolbar>		
+        <paper-item>Financing Options</paper-item>
+      </paper-toolbar>
+      <paper-item>
+        At MetroPCS No Limit Talk, we strive to get you the phone of your dreams.
+        We offer financing from two partners, SmartPay by BillFloat and financing with Progressive
+        Click on the company of your choice and fill out the application before coming into the store!
+      </paper-item>
+      <a href="https://www.progressivelp.com/onlineapplication/onlineapplication.aspx?sid=Metro4077361288">
+        <iron-image sizing="contain" class="financeImg" src="http://tallahasseefurnituredirect.com/wp-content/uploads/2014/09/progressivelogo.png"></iron-image>
+      </a>
+      <iron-image id="bill_float_image"  onclick="document.querySelector('#bill_float_toast').open()" sizing="contain" class="financeImg" src="http://s3.amazonaws.com/finovate-archive/old/finovatewebsite/smart-pay-powered-by-billfloat-85720705.jpg"></iron-image>
+      <paper-toast id="bill_float_toast" opened>Sorry for the inconvenice! There is no online application for SmartPay by BillFloat at this time. Please visit one of our stores to apply!</paper-toast>  
+    </paper-material>
+  </template>
+  <script src="financing.js"></script>
+</dom-module>

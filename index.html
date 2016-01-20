@@ -3,9 +3,14 @@
 <head>
 <link rel="stylesheet" type"text/css"  href="MetroPCSm/customstylepolymer.css">
 <link rel="import" href="bower_components/polymer/polymer.html">
-<link rel="import" href="custompolymer.html">
-<link rel="import" href="locationapp.html">
-<link rel="import" href="financeapp.html">
+<link rel="import" href="modules/about-page/about.html">
+<link rel="import" href="modules/careers-form/careers.html">
+<link rel="import" href="modules/careers-page/careers.html">
+<link rel="import" href="modules/contact-page/contact.html">
+<link rel="import" href="modules/faq-page/faq.html">
+<link rel="import" href="modules/financing-page/financing.html">
+<link rel="import" href="modules/home-page/home.html">
+<link rel="import" href="modules/locations-page/locations.html">
 <link rel="import" href="bower_components/paper-button/paper-button.html">
 <link rel="import" href="bower_components/paper-input/paper-input.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
@@ -51,65 +56,51 @@
 	</paper-material>
 	<iron-pages selected="{{selected}}">
 		<div name="Home" class="container flex-center-justified">
-			<paper-material id="homePanel" elevation="3">
-				<paper-item>
-				Welcome to MetroPCS No Limit Talk
-				</paper-item>
-			</paper-material>
+      <home-page></home-page>
 		</div>
 		<div name="About">
-            <about-app></about-app>      
-            </div>
+      <about-page></about-page>      
+    </div>
 		<div name="Locations">
-                  <location-app></location-app>
-      
+      <locations-page></locations-page>
 		</div>
 		<div name="Financing">
-             <finance-app></finance-app>
+      <financing-page></financing-page>
 		</div>
 		<div name="Careers">
-        <div>
+      <div>
         <paper-material id="careerPanel">
           <paper-toolbar>
             <paper-item>Careers</paper-item>
           </paper-toolbar>
           <paper-item>
-          At MetroPCS - No Limit Talk we are always looking to bring new leaders to our team. If you think you have what it takes and would like to apply for an opportunity to work with us, please submit us a resume and your information below.
+            At MetroPCS - No Limit Talk we are always looking to bring new leaders to our team. If you think you have what it takes and would like to apply for an opportunity to work with us, please submit us a resume and your information below.
           </paper-item>
-         <career-custom>
+          <careers-form>
             <form action="MAILTO:mario.massad@gmail.com" method="POST" enctype="text/plain" is="iron-form" id="form" method="post" action="form/handler">
-                <paper-input id = "firstname" name="firstname" label="First Name"></paper-input>
-                <paper-input id = "lastname" name="lastname" label="Last Name"></paper-input>
-                  <gold-phone-input id="phonenumber" name ="telephone"></gold-phone-input>
-                  <gold-email-input id="emailfrom" name="email"></gold-email-input>
-                <div>
-                      <career-about></career-about>
-              
-                </div>
-                <div class="layout center justified">
-                  <iron-autogrow-textarea id="abouttextarea" rows="4"></iron-autogrow-textarea>
-                </div>
-                <paper-input id="resumeFile" type="file" name="resume"></paper-input>
-                <paper-input id="sendApplication" type="submit" value="Send">Submit</paper-button>
-              </form>   
-        </career-custom>
+              <paper-input id = "firstname" name="firstname" label="First Name"></paper-input>
+              <paper-input id = "lastname" name="lastname" label="Last Name"></paper-input>
+              <gold-phone-input id="phonenumber" name ="telephone"></gold-phone-input>
+              <gold-email-input id="emailfrom" name="email"></gold-email-input>
+              <div>
+                <careers-page></careers-page>
+              </div>
+              <div class="layout center justified">
+                <iron-autogrow-textarea id="abouttextarea" rows="4"></iron-autogrow-textarea>
+              </div>
+              <paper-input id="resumeFile" type="file" name="resume"></paper-input>
+              <paper-input id="sendApplication" type="submit" value="Send">Submit</paper-button>
+            </form>   
+          </career-form>
         </paper-material>
       </div>
 		</div>
-		<div name="Contact Us">Contact Us</div>
+		<div name="Contact Us">
+      <contact-page></contact-page>
+    </div>
 		<div name="FAQ">
-                  <paper-material>
-                        <style-element>        
-                              <body>
-                              <h1>Frequently Asked Questions</h1>
-                              <section class="shadow">
-                              <p>Mario was here <em>this</em> is a test</p>
-                              </section>
-                              </body>
-                        </style-element>
-                  </paper-material>
-                  
-            </div>
+      <faq-page></faq-page>
+    </div>
 	</iron-pages>
 </body>
 <script>
