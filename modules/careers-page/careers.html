@@ -1,14 +1,43 @@
 <dom-module id="careers-page">
   <template>
     <style>
-      p{
+      p {
         @apply(--paper-font-body1);
       }
+      paper-button {
+        color: white;
+        background: #663399;
+      }	
     </style>
-    
-    <p>Tell us a little about yourself. Please include whether you are looking for Full/Part time.<p>
-    <br>
-    <p>Remember to include your resume before submitting</p>
+    <div>
+      <paper-material id="careerPanel">
+        <paper-toolbar>
+          <p>Careers</p>
+        </paper-toolbar>
+        <p> At MetroPCS - No Limit Talk we are always looking to bring new leaders to our team. If you think you have what it takes and would like to apply for an opportunity to work with us, please submit us a resume and your information below.</p>
+      <paper-button on-click="toggle">Apply</paper-button>
+        <iron-collapse id="collapsePanel">
+              <form action="MAILTO:mario.massad@gmail.com" method="POST" enctype="text/plain" is="iron-form" id="form" method="post" action="form/handler">
+                <paper-input id = "firstname" name="firstname" label="First Name"></paper-input>
+                <paper-input id = "lastname" name="lastname" label="Last Name"></paper-input>
+                <gold-phone-input id="phonenumber" name ="telephone"></gold-phone-input>
+                <gold-email-input id="emailfrom" name="email"></gold-email-input>
+                <div>
+                  <p>Tell us a little about your self<p>
+                  <br>
+                  <p> Please include whether you are looking for Full/Part time.</p>
+                  <br>
+                  <p>Remember to include your resume before submitting</p>
+                </div>
+                <div class="layout center justified">
+                  <iron-autogrow-textarea id="abouttextarea" rows="4"></iron-autogrow-textarea>
+                </div>
+                <paper-input id="resumeFile" type="file" name="resume"></paper-input>
+                <paper-input id="sendApplication" type="submit" value="Send">Submit</paper-button>
+              </form>
+        </iron-collapse>
+      </paper-material>
+    </div>
   </template>
   <script src="careers.js"></script>
 </dom-module>
