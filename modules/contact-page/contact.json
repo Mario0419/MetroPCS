@@ -1,0 +1,29 @@
+[
+	{
+		"name": "East Colonial",
+		"address": "11222 E. Colonial Dr",
+		"city" : "Orlando",
+		"state" : "Florida",
+		"zipcode" : "32817",
+		"phone" : "4077361288",
+		"phone-nice" : "(407) 736-1288"
+	},
+	{
+		"name": "Americana",
+		"address" : "5405 South Texas Ave",
+		"city" : "Orlando",
+		"state" : "Florida",
+		"zipcode" : "32839",
+		"phone" : "4072518851",
+		"phone-nice" : "(407) 251-8851" 
+	},
+	{
+		"name": "Pine Hills",
+		"address" : "2711 N. Pine Hills Rd",
+		"city" : "Orlando",
+		"state" : "Florida",
+		"zipcode" : "32808",
+		"phone" : "4078261491",
+		"phone-nice" : "(407) 826-1491"
+	}
+]

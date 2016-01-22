@@ -4,11 +4,65 @@
       p{
         @apply(--paper-font-body1);
       }
+      div {
+        @apply(--paper-font-body1);
+      }
+      body {
+        background: gray;
+      }
+      .card-actions {
+        background: #00ff00;
+        color: black;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      #contactPanel {
+        elevation: 4;
+        color: var(--paper-card-header-color, black);
+        left:50%;
+       
+      } 
     </style>
-    
-    <paper-material>
-      <p>Contact us</p>
-    </paper-material>
+    <body>
+      <br><br><br>
+      <paper-card elevation="4" id="contactPanel" heading="East Colonial">
+            <div class="card-content">
+              Address: 11222 East Colonial dr.<br>
+              Orlando, FL, 33980<br>
+              Phone: (407) 736-1288
+              <br>
+            </div>
+            <div class="card-actions">
+               <a href="tel:4077361288"><paper-button>Call</paper-button></a>
+            </div>
+      </paper-card>
+      <br><br><br>
+      <paper-card elevation="4" id="contactPanel" heading="Americana">
+            <div class="card-content">
+              Address: 5405 South Texas Ave<br>
+              Orlando, FL, 32839<br>
+              Phone: (407) 251-8851
+              <br>
+            </div>
+            <div class="card-actions">
+               <a href="tel:4077361288"><paper-button>Call</paper-button></a>
+            </div>
+          </paper-card>
+      <br><br>
+      <paper-card elevation="4" id="contactPanel" heading="Pine Hills">
+            <div class="card-content">
+              Address: 2711 N. Pine Hills Rd<br>
+              Orlando, FL, 32808<br>
+              Phone: (407) 826-1491
+              <br>
+            </div>
+            <div class="card-actions">
+               <a href="tel:4077361288"><paper-button>Call</paper-button></a>
+            </div>
+          </paper-card>
+      </body>
   </template>
   <script src="contact.js"></script>	
 </dom-module>
