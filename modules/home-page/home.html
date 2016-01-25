@@ -4,12 +4,22 @@
       p{
         @apply(--paper-font-body1);
       }
+      h1 {
+        @apply(--paper-font-title);
+      }
+      .maincontainer {
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+      }
     </style>
     
     <paper-material id="homePanel" elevation="3">
-      <paper-item>
-        Welcome to MetroPCS No Limit Talk
-      </paper-item>
+        <div class="maincontainer">
+        <h1>MetroPCS - No Limit Talk</h1>
+        
+        
+        <p>Welcome! We are No Limit Talk. We are based in Orlando, FL</p>
+        </div>
     </paper-material>
   </template>
   <script src="home.js"></script>	
