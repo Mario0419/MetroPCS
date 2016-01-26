@@ -48,6 +48,9 @@
 			background: #663399;
 			color: white;		
 		}
+		p {
+			font: --paper-font-title;
+		}
 	</style>
 	<paper-material id="navBar" elevation="2">
 		<paper-tabs id="navTab" selected="0">
@@ -60,7 +63,7 @@
 			<paper-tab>FAQ</paper-tab>
 		</paper-tabs>
 	</paper-material>
-	<iron-pages selected="{{selected}}">
+	<iron-pages selected="0">
 		<div name="Home" class="container flex-center-justified">
       		<home-page></home-page>
 		</div>
