@@ -6,6 +6,9 @@
         height:90%;
         top:10%;
       }
+      p {
+        @apply(--paper-font-title);
+      }
       google-map{
         position:absolute;
         top:0px;
@@ -25,6 +28,22 @@
       .locationToolbar {
         --paper-toolbar-background: #663399;
       }
+      #locationSearchBar {
+        position:fixed;
+        width: 250px;
+        height: 275px;
+        top: 75px;
+        right: 8px;
+        z-index: 1;
+        background:white;
+      }
+      paper-input {
+        --paper-input-color: black;
+        padding: 10px;
+      }
+      #directionInputs{
+        background:white;
+      }
     </style>
     
     <div id="locationsChooser">
@@ -33,13 +52,28 @@
           <paper-item class="locationHeader">Locations</paper-item>
         </paper-toolbar>
         <div>
-          <paper-item id="ec" on-click="clickItem" marker="eastcolonialmarker">East Colonial</paper-item>
-          <paper-item id="am" on-click="clickItem" marker="americanamarker">Americana</paper-item>
-          <paper-item id="pi" on-click="clickItem" marker="pinehillsmarker">Pine Hills</paper-item>
+          <paper-item id="ec" on-click="clickItem" address="11222 E. Colonial Blvd, Orlando, FL, 32817" marker="eastcolonialmarker">East Colonial</paper-item>
+          <paper-item id="am" on-click="clickItem" address="5405 South Texas Ave, Orlando, FL" marker="americanamarker">Americana</paper-item>
+          <paper-item id="pi" on-click="clickItem" address="2711 N. Pine Hills Rd, Orlando, FL" marker="pinehillsmarker">Pine Hills</paper-item>
         </div>
       </paper-header-panel>
     </div>
-    <google-map id="storemap" fit-to-markers>
+    
+    <div id="locationSearchBar">
+      <paper-header-panel>
+        <paper-toolbar class="locationToolbar">
+          <paper-item>Directions</paper-item>
+        </paper-toolbar>
+        <div id="directionInputs">
+          <paper-input id="startAddressInput" label="Address"></paper-input><span></span>
+          <paper-input id="destinationAddressInput" label="Destination"></paper-input>
+          <paper-icon-button icon="search"></paper-icon-button>
+        
+        </div>
+      </paper-header-panel>
+    </div>
+        <google-map-directions id="mapdirections" map="{{map}}" start-address="12944 Mallory Circle, Orlando, FL" end-address="11222 East Colonial Drive, orlando, fl"></google-map-directions>
+    <google-map map="{{map}}"id="storemap" fit-to-markers>
       <google-map-marker  id="eastcolonialmarker" latitude="28.5673759" longitude="-81.2182539" draggable="false" title="East Colonial">
         <paper-item>East Colonial</paper-item>
         <paper-item-body>

@@ -21,7 +21,9 @@
 <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
 <link rel="import" href="bower_components/google-map/google-map.html">
 <link rel="import" href="bower_components/google-map/google-map-marker.html">
+<link rel="import" href="bower_components/paper-input/paper-input-container.html">
 <link rel="import" href="bower_components/google-map/google-map-search.html">
+<link rel="import" href="bower_components/google-map/google-map-directions.html">
 <link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
 <link rel="import" href="bower_components/paper-item/paper-item.html">
 <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
@@ -35,21 +37,25 @@
 <link rel="import" href="bower_components/gold-email-input/gold-email-input.html">
 <link rel="import" href="bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html">
 <link rel="import" href="bower_components/iron-doc-viewer/iron-doc-viewer.html">
+<link rel="import" href="bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="bower_components/paper-toast/paper-toast.html">
 <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="bower_components/iron-list/iron-list.html">
+<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="stylesheet" type"text/css" href="MetroPCSm/maincss.css">
 <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js" type="text/javascript"></script>
 </head>
 <body>
+<dom-module id="main-toolbar">
+<template>
 	<style>
 		#navTab {
 			background: #663399;
 			color: white;		
 		}
-		p {
-			font: --paper-font-title;
+		paper-tab {
+			@apply(--paper-font-menu);
 		}
 	</style>
 	<paper-material id="navBar" elevation="2">
@@ -86,12 +92,22 @@
 			<faq-page></faq-page>
 		</div>
 	</iron-pages>
-</body>
+</template>
 <script>
+	Polymer({
+		is: 'main-toolbar',
+	})
+</script>
+</dom-module>
+<main-toolbar></main-toolbar>
+<script>
+	
 	var pages = document.querySelector('iron-pages');
 	var tabs = document.querySelector('paper-tabs');
 	tabs.addEventListener('iron-select', function(){
 		pages.selected = tabs.selected;
 	});
 </script>
+</body>
+
 </html>
