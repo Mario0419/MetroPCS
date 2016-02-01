@@ -4,17 +4,42 @@
       p{
         @apply(--paper-font-body1);
       }
+      h1 {
+        @apply(--paper-font-title);
+      }
+      .mainContainer {
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+        padding: 20px;
+      }
+      .question {
+        @apply(--paper-font-subhead);
+        font-weight: bold;
+      }
+      .answer {
+        @apply(--paper-font-body2);
+      }
+      .qa{
+        @apply(--layout-center);
+      }
     </style>
     
-    <paper-material>
-      <style-element>        
-        <body>
+    <paper-material class="homePanel">
+      <div class="mainContainer">
           <h1>Frequently Asked Questions</h1>
-          <section class="shadow">
-            <p>Mario was here <em>this</em> is a test</p>
-          </section>
-        </body>
-      </style-element>
+          <div class="qa">
+              <p class="question">Q. Can I pay my bill with you over the phone?</p>
+              <p class="answer">A. Unfortunately due to security reasons, we can not take payments over the phone.
+                However, we would be glad to help you in person. Just come into one of our 3 stores for assistance.
+              </p>
+          </div>
+          <div class="qa">
+            <p class="question">Q. What are your store hours?</p>
+            <p class="answer">A. All of our stores are open Monday - Saturday from 9 a.m. - 8 p.m. On Sunday's we are open from 11 a.m. to 6 p.m.
+              Please visit our 'Location' or 'Contact Us' page for more information
+            </p>
+          </div>
+      </div>
     </paper-material>
   </template>
   <script src="faq.js"></script>	

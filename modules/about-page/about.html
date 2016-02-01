@@ -4,10 +4,19 @@
       p{
         @apply(--paper-font-body1);
       }
+      .title {
+        @apply(--paper-font-title);
+      }
+      .mainContainer {
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+      }
     </style>
     
-    <paper-material>
-      <p>About us</p>
+    <paper-material class="homePanel" elevation="3">
+      <div class="mainContainer">
+      <p class="title">About us</p>
+      </div>
     </paper-material>
   </template>
   <script src="about.js"></script>	

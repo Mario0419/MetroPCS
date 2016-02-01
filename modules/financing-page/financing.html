@@ -16,11 +16,21 @@
       paper-toolbar {
         --paper-toolbar-background: #663399;
       }
+      .toolbar {
+        @apply(--paper-font-title);
+        @apply(--layout-center);
+        @apply(--layout-vertical);
+      }
+      .titlebar {
+        @apply(--paper-font-title);
+      }
     </style>
     
     <paper-material id="financePanel">
-      <paper-toolbar>		
-        <paper-item>Financing Options</paper-item>
+      <paper-toolbar class="toolbar">	
+        <div class="titlebar">	
+        Financing Options
+        </div>
       </paper-toolbar>
       <paper-item>
         At MetroPCS No Limit Talk, we strive to get you the phone of your dreams.

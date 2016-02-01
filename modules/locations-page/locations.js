@@ -14,5 +14,13 @@ Polymer({
     var destination = document.getElementById("destinationAddressInput");
     destination.value = dest.value;
     marker.open = true;
+  },
+  clickDirections: function(event) {
+    var start = document.getElementById("startAddressInput");
+    var end = document.getElementById("destinationAddressInput");
+    var directions = document.getElementById("mapdirections");
+    
+    directions.startAddress=start.value;
+    directions.endAddress=end.value;
   }
 })
