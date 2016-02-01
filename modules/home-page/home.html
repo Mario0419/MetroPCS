@@ -12,15 +12,18 @@
         @apply(--layout-center);
       }     
     </style>
-    
-    <paper-material class="homePanel" elevation="3">
-        <div class="maincontainer">
-        <h1>MetroPCS - No Limit Talk</h1>
-        
-        
-        <p>Welcome! We are No Limit Talk. We are based in Orlando, FL</p>
-        </div>
-    </paper-material>
+    <div class="your-class">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+    <div>
   </template>
+  <script>
+    $(document).ready(function() {
+      $('.your-class').slick({
+        "setting-name": "setting-value"
+      });
+    });
+  </script>
   <script src="home.js"></script>	
 </dom-module>
