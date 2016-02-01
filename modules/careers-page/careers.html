@@ -39,25 +39,27 @@
           <div>
             <paper-button on-click='open_dialog'>Apply</paper-button>
             <paper-dialog id="application-dialog" with-backdrop>
-              <form action="MAILTO:mario.massad@gmail.com" method="POST" enctype="text/plain" is="iron-form" id="form" method="post" action="form/handler">
-                <paper-input id = "firstname" name="firstname" label="First Name"></paper-input>
-                <paper-input id = "lastname" name="lastname" label="Last Name"></paper-input>
-                <gold-phone-input id="phonenumber" name ="telephone"></gold-phone-input>
-                <gold-email-input id="emailfrom" name="email"></gold-email-input>
-                <div>
-                  <p>Tell us a little about your self<p>
-                  <br>
-                  <p> Please include whether you are looking for Full/Part time.</p>
-                  <br>
-                  <p>Remember to include your resume before submitting</p>
-                </div>
-                <div class="layout center justified">
-                  <iron-autogrow-textarea id="abouttextarea" rows="4"></iron-autogrow-textarea>
-                </div>
-                <paper-input id="resumeFile" type="file" name="resume"></paper-input>
-                <paper-button on-click="submit_form">Submit</paper-button>
-                <paper-button dialog-dismiss>Cancel</paper-button>
-              </form>
+              <paper-dialog-scrollable>
+                <form action="MAILTO:mario.massad@gmail.com" method="POST" enctype="text/plain" is="iron-form" id="form" method="post" action="form/handler">
+                  <paper-input id = "firstname" name="firstname" label="First Name"></paper-input>
+                  <paper-input id = "lastname" name="lastname" label="Last Name"></paper-input>
+                  <gold-phone-input id="phonenumber" name ="telephone"></gold-phone-input>
+                  <gold-email-input id="emailfrom" name="email"></gold-email-input>
+                  <div>
+                    <p>Tell us a little about your self<p>
+                    <br>
+                    <p> Please include whether you are looking for Full/Part time.</p>
+                    <br>
+                    <p>Remember to include your resume before submitting</p>
+                  </div>
+                  <div class="layout center justified">
+                    <iron-autogrow-textarea id="abouttextarea" rows="4"></iron-autogrow-textarea>
+                  </div>
+                  <paper-input id="resumeFile" type="file" name="resume"></paper-input>
+                  <paper-button on-click="submit_form">Submit</paper-button>
+                  <paper-button dialog-dismiss>Cancel</paper-button>
+                </form>
+              </paper-dialog-scrollable>
             </paper-dialog>
            </div>
        </div>
