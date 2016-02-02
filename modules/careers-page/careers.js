@@ -1,6 +1,9 @@
 Polymer({
   is: 'careers-page',
-  toggle: function(){
-    this.$.collapsePanel.toggle();
-  }	
+  open_dialog: function(){
+    this.$["application-dialog"].open()
+  },
+  submit_form: function(){
+    this.$["form"].submit()
+  }
 })
