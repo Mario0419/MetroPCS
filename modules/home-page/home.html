@@ -10,16 +10,55 @@
       .maincontainer {
         @apply(--layout-vertical);
         @apply(--layout-center);
-      }     
+      }
+      .homePageBanner {
+        background: #333192;
+        @apply(--layout-horizontal);
+        @apply(--layout-justified);
+        padding: 50px;
+        color: white;
+        @apply(--paper-font-body1);
+      }
     </style>
-    <div class="autoplay">
-      <div>one<br><br>mario</div>
-      <div>two</div>
-      <div>three</div>
-      <div>four</div>
-      <div>five</div>
-      <div>six</div>
-    <div>
+      <div class="single-item">
+        <div>
+           <iron-image style="width: 400px; height:400px;" src="http://localhost:3001/MetroPCSm/B-spot_banner_2.jpg"></iron-image>
+           
+        </div>
+        <div>
+          <iron-image style="width:400px; height:400px;" src="http://localhost:3001/MetroPCSm/Image_BlastingFast4gLTE.png"></iron-image>
+        </div>
+        <div>
+          <iron-image style="width:400px; height:400px;" src="http://localhost:3001/MetroPCSm/Image_Coverage.png"></iron-image>
+        </div>
+        <div>
+          <iron-image style="width:400px; height:400px;" src="http://localhost:3001/MetroPCSm/Image_NoAnnualContract.png"></iron-image>
+        </div>
+        <div>
+          <iron-image style="width:400px; height:400px;" src="http://localhost:3001/MetroPCSm/Image_PhonesForAllPricedForAll.png"></iron-image>
+        </div>
+        <div>
+          <iron-image style="width:400px;height:400px;" src="http://localhost:3001/MetroPCSm/Image_PlansWithBigsavings.png"></iron-image>
+        </div>
+      </div>
+      <div>
+        <paper-material class="homePageBanner">
+          <div>
+            mario
+          </div>
+          <div>
+            </div>
+          <div>
+            massad
+          </div>
+          <div>
+            </div>
+          <div>
+            massad
+          </div>
+            
+        </paper-material>
+      </div>
   </template>
   <script>
     $(document).ready(function() {
@@ -30,6 +69,12 @@
         autoplay: true,
         autoplaySpeed: 2000,
         
+      });
+      $('.single-item').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        slidesToShow: 1,
       });
     });
   </script>
