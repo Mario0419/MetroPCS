@@ -1,6 +1,9 @@
 <dom-module id="financing-page">
   <template>
     <style>
+      p {
+        @apply(--paper-font-body1);
+      }
       .financeImg{
         width:248px;
         height: 250px;
@@ -32,11 +35,13 @@
         Financing Options
         </div>
       </paper-toolbar>
-      <paper-item>
-        At MetroPCS No Limit Talk, we strive to get you the phone of your dreams.
+      <div style="padding: 10px">
+        <p>
+         <pre></pre>At MetroPCS No Limit Talk, we strive to get you the phone of your dreams.
         We offer financing from two partners, SmartPay by BillFloat and financing with Progressive
         Click on the company of your choice and fill out the application before coming into the store!
-      </paper-item>
+        </p>
+      </div>
       <a href="https://www.progressivelp.com/onlineapplication/onlineapplication.aspx?sid=Metro4077361288">
         <iron-image sizing="contain" class="financeImg" src="http://tallahasseefurnituredirect.com/wp-content/uploads/2014/09/progressivelogo.png"></iron-image>
       </a>
