@@ -53,7 +53,7 @@
         </paper-toolbar>
         <div>
           <paper-item id="ec" on-click="clickItem" address="11222 E. Colonial Blvd, Orlando, FL, 32817" marker="eastcolonialmarker">East Colonial</paper-item>
-          <paper-item id="am" on-click="clickItem" address="5405 South Texas Ave, Orlando, FL, 32839" marker="americanamarker">Americana</paper-item>
+          <paper-item id="am" on-click="clickItem" address="5405 South Texas Ave, Orlando, FL, 32839" marker="americanamarker">South Texas</paper-item>
           <paper-item id="pi" on-click="clickItem" address="2711 N. Pine Hills Rd, Orlando, FL, 32808" marker="pinehillsmarker">Pine Hills</paper-item>
         </div>
       </paper-header-panel>
@@ -74,22 +74,22 @@
     </div>
         <google-map-directions id="mapdirections" map="{{map}}" start-address="" end-address=""></google-map-directions>
     <google-map map="{{map}}"id="storemap" fit-to-markers>
-      <google-map-marker  id="eastcolonialmarker" latitude="28.5673759" longitude="-81.2182539" draggable="false" title="East Colonial">
-        <paper-item>East Colonial</paper-item>
+      <google-map-marker  id="eastcolonialmarker" latitude="28.5673759" longitude="-81.2182539" draggable="false" title="East Colonial Drive">
+        <paper-item>East Colonial Drive</paper-item>
         <paper-item-body>
           Address: 11222 E. Colonial Blvd, Orlando, FL, 32817<br>
           Phone: <a href="tel:4077361288">(407) 736-1288</a>
         </paper-item-body>
       </google-map-marker>
-      <google-map-marker id="americanamarker"latitude="28.4872825" longitude="-81.4110564" draggable="false" title="Americana">
-        <paper-item>Americana</paper-item>
+      <google-map-marker id="americanamarker"latitude="28.4872825" longitude="-81.4110564" draggable="false" title="South Texas Ave">
+        <paper-item>South Texas Ave</paper-item>
         <paper-item-body>
           Address: 5405 South Texas Ave, Orlando, FL, 32839<br>
           Phone: <a href="tel:4072518851">(407) 251-8851</a>
         </paper-item-body>
       </google-map-marker>
-      <google-map-marker id="pinehillsmarker" latitude="28.5795525" longitude="-81.4533089" draggable="false" title="Pine Hills">
-        <paper-item>Pine Hills</paper-item>
+      <google-map-marker id="pinehillsmarker" latitude="28.5795525" longitude="-81.4533089" draggable="false" title="Pine Hills Rd">
+        <paper-item>Pine Hills Rd</paper-item>
         <paper-item-body>
           Address: 2711 N. Pine Hills Rd<br>
           Phone: <a href="tel:4078261491">(407) 826-1491</a>
