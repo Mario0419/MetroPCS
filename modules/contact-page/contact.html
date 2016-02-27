@@ -2,10 +2,16 @@
   <template>
     <style>
       p{
-        @apply(--paper-font-body1);
+        @apply(--paper-font-body2);
+        color: #333192;
       }
       div {
         @apply(--paper-font-body1);
+      }
+      h1 {
+        @apply(--paper-font-display1);
+        size: 24px;
+        color: #333192;
       }
       body {
         background: gray;
@@ -26,45 +32,46 @@
         @apply(--layout-vertical);
         @apply(--layout-center);
       } 
+      .contactus {
+        @apply(--layout-horizontal);
+        margin-left: 17%;
+        margin-right: auto;
+      }
+      paper-button {
+        color: white;
+        background: #333192;
+      }	
+      .submitButton {
+      margin-left: auto;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      border-color: transparent;
+      color: white;
+    }
+    #commentTextArea {
+      margin-left: auto;
+    }
     </style>
     <body>
-      <br><br><br>
-      <div class="contactContainer">
-        <paper-card elevation="4" id="contactPanel" heading="East Colonial">
-              <div class="card-content">
-                Address: 11222 East Colonial dr.<br>
-                Orlando, FL, 33980<br>
-                Phone: (407) 736-1288
-                <br>
-              </div>
-              <div class="card-actions">
-                <a href="tel:4077361288"><paper-button>Call</paper-button></a>
-              </div>
-        </paper-card>
-        <br><br><br>
-        <paper-card elevation="4" id="contactPanel" heading="Americana">
-              <div class="card-content">
-                Address: 5405 South Texas Ave<br>
-                Orlando, FL, 32839<br>
-                Phone: (407) 251-8851
-                <br>
-              </div>
-              <div class="card-actions">
-                <a href="tel:4077361288"><paper-button>Call</paper-button></a>
-              </div>
-            </paper-card>
-        <br><br>
-        <paper-card elevation="4" id="contactPanel" heading="Pine Hills">
-              <div class="card-content">
-                Address: 2711 N. Pine Hills Rd<br>
-                Orlando, FL, 32808<br>
-                Phone: (407) 826-1491
-                <br>
-              </div>
-              <div class="card-actions">
-                <a href="tel:4077361288"><paper-button>Call</paper-button></a>
-              </div>
-        </paper-card>
+      <div class="contactus">
+        <div id="messagePanel">
+          <h1>Leave us a message</h1>
+          <p>We are always striving to improve. Please tell us how we are doing today!</p>
+          <form action="mailto:mario.massad@gmail.com" enctype="text/plain" is="iron-form" id="form" method="post">
+                    <paper-input id = "name" name="name" label="Name"></paper-input>
+                    <gold-phone-input id="telephone" name ="telephone"></gold-phone-input>
+                    <gold-email-input id="emailfrom" name="email"></gold-email-input>
+                    <iron-autogrow-textarea id="commentTextArea" rows="5" placeholder="Tell us how we are doing..."></iron-autogrow-textarea>
+                    <br><br>
+               <paper-button><button class="submitButton" type="submit">Submit</button></paper-button>
+            </form>
+        </div>
+        <div>~~~~~~~~~~~~~~</div>
+        <div id="contactPanel2">
+          <h1>Contact Us</h1>
+          <p>Going to contact us here</p>
+        </div>
       </div>
       </body>
   </template>

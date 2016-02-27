@@ -15,6 +15,8 @@
       }
       .titlebar {
         @apply(--paper-font-title);
+        margin-left: auto;
+        margin-right: auto;
       }
       .applicationPanel {
         @apply(--layout-center);
@@ -27,6 +29,27 @@
       #description{
         min-height: var(--paper-item-min-height, 125px);
       }
+    
+    .submitButton {
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      border-color: transparent;
+      color: white;
+    }
+    
+    .applicationLayout {
+      @apply(--layout-center);
+      @apply(--layout-vertical);
+    }
+    .applicationHeader {
+      @apply(--layout-horizontal);
+      @apply(--layout-center);
+    }
+    .submitPanel {
+      margin-left:60%;
+      @apply(--layout-horizontal);
+    }
     </style>
     <div>
       <paper-material id="careerPanel">
@@ -38,29 +61,44 @@
       <div class="applicationPanel">
           <paper-item id="description"> At MetroPCS - No Limit Talk we are always looking to bring new leaders to our team. If you think you have what it takes and would like to apply for an opportunity to work with us, please submit us a resume and your information below.</paper-item>
           </br>
+          <polymer-element name="button-input" extends="input">
+              <template>
+                 <style>:host{border: 0; padding: 0;}</style>
+                 <input value="{{value}}">
+              </template>
+          </polymer-element>
           <div>
             <paper-button on-click='open_dialog'>Apply</paper-button>
             <paper-dialog id="application-dialog" with-backdrop>
               <paper-dialog-scrollable>
-                <form action="MAILTO:mario.massad@gmail.com" method="POST" enctype="text/plain" is="iron-form" id="form" method="post" action="form/handler">
-                  <paper-input id = "firstname" name="firstname" label="First Name"></paper-input>
-                  <paper-input id = "lastname" name="lastname" label="Last Name"></paper-input>
-                  <gold-phone-input id="phonenumber" name ="telephone"></gold-phone-input>
-                  <gold-email-input id="emailfrom" name="email"></gold-email-input>
+                <div class="applicationlayout">
+                  <div class="applicationHeader">
+                    <p class="titlebar">Application</p>
+                  </div>
                   <div>
-                    <p>Tell us a little about your self<p>
-                    <br>
-                    <p> Please include whether you are looking for Full/Part time.</p>
-                    <br>
-                    <p>Remember to include your resume before submitting</p>
+                  <form action="mailto:mario.massad@gmail.com" enctype="text/plain" is="iron-form" id="form" method="post">
+                    <paper-input id = "firstname" name="firstname" label="First Name"></paper-input>
+                    <paper-input id = "lastname" name="lastname" label="Last Name"></paper-input>
+                    <gold-phone-input id="phonenumber" name ="telephone"></gold-phone-input>
+                    <gold-email-input id="emailfrom" name="email"></gold-email-input>
+                    <paper-radio-group role="radiogroup">
+                       <paper-radio-button name="fulltime">Full-Time</paper-radio-button>
+                       <paper-radio-button name="parttime">Part-Time</paper-radio-button>
+                    </paper-radio-group>
+                    <div>
+                      <p>Do you have previous MetroPCS/T-Mobile sales experience?</p>
+                      <paper-radio-group role="radiogroup">
+                        <paper-radio-button name="yes">Yes</paper-radio-button>
+                        <paper-radio-button name="no">No</paper-radio-button>
+                      </paper-radio-group>
+                    </div>
+                    <div class="submitPanel">
+                      <paper-button><button class="submitButton" type="submit">Submit</button></paper-button>
+                      <paper-button dialog-dismiss>Cancel</paper-button>
+                    </div>
+                  </form>
                   </div>
-                  <div class="layout center justified">
-                    <iron-autogrow-textarea id="abouttextarea" rows="4"></iron-autogrow-textarea>
-                  </div>
-                  <paper-input id="resumeFile" type="file" name="resume"></paper-input>
-                  <paper-button on-click="submit_form">Submit</paper-button>
-                  <paper-button dialog-dismiss>Cancel</paper-button>
-                </form>
+                </div>
               </paper-dialog-scrollable>
             </paper-dialog>
            </div>
